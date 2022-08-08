@@ -11,7 +11,7 @@ playlists
 				lobbytitle #PL_sbox_lobby
 				description #PL_sbox_desc
 				abbreviation #PL_sbox_abbr
-				
+
 				max_teams 1
 				classic_mp 0
 			}
@@ -25,7 +25,7 @@ playlists
 				lobbytitle #PL_fw_lobby
 				description #PL_fw_desc
 				abbreviation #PL_fw_abbr
-					
+
 				max_players 16
 				max_teams 2
 				classic_mp 1
@@ -45,9 +45,9 @@ playlists
 				max_players 12
 				max_teams 12
 				classic_mp 1
-				
+
 				scorelimit 21 // temp until we have a way of dynamically setting non-default scorelimit in code
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_FFA
 				gamemode_bullet_001	#GAMEMODE_BULLET_FFA_001
 				gamemode_bullet_002	#GAMEMODE_BULLET_FFA_002
@@ -69,9 +69,9 @@ playlists
 				max_players 12
 				max_teams 2
 				classic_mp 1
-				
+
 				scorelimit 20
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 		}
@@ -88,7 +88,7 @@ playlists
 				max_players 12
 				max_teams 2
 				classic_mp 1
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 		}
@@ -111,7 +111,7 @@ playlists
 				timelimit 2
 				roundtimelimit 2
 				roundscorelimit 5
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 		}
@@ -125,13 +125,13 @@ playlists
 				description #PL_kr_desc
 				hint #PL_kr_hint
 				abbreviation #PL_kr_abbr
-				
+
 				max_players 16
 				max_teams 16
 				classic_mp 1
 				timelimit 7.5
 				scorelimit 99999 // arbitrarily high number
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 		}
@@ -145,7 +145,7 @@ playlists
 				description #PL_fastball_desc
 				hint #PL_fastball_hint
 				abbreviation #PL_fastball_abbr
-				
+
 				max_players 16
 				max_teams 2
 				classic_mp 1
@@ -153,7 +153,7 @@ playlists
 				timelimit 2
 				roundtimelimit 2
 				roundscorelimit 5
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 		}
@@ -198,7 +198,7 @@ playlists
 				image tdm
 				timelimit 10
 				max_players 16
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 		}
@@ -250,7 +250,7 @@ playlists
 				lobbytitle #PL_tffa_lobby
 				description #PL_tffa_desc
 				abbreviation #PL_sbox_abbr
-				
+
 				scorelimit 20
 				max_players 10
 				max_teams 10
@@ -357,6 +357,7 @@ playlists
 						mp_angel_city 1
 						mp_colony02 1
 						mp_glitch 1
+						mp_lf_stacks 1
 						mp_relic02 1
 						mp_wargames 1
 						mp_rise 1
@@ -428,7 +429,7 @@ playlists
 				timelimit 2
 				roundtimelimit 2
 				roundscorelimit 5
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 			gamemodes
@@ -529,9 +530,9 @@ playlists
 				scorelimit 5
 				roundtimelimit 2
 				roundscorelimit 5
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
-			}	
+			}
 			gamemodes
 			{
 				fastball
@@ -568,14 +569,14 @@ playlists
 				hint #PL_fw_hint
 				abbreviation #PL_fw_abbr
 				image fw
-				
+
 				max_players 16
 				max_teams 2
 				classic_mp 1
 				scorelimit 100
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
-			}	
+			}
 			gamemodes
 			{
 				fw
@@ -614,17 +615,17 @@ playlists
 				mixtape_slot 4
 				mixtape_timeout 120
 				visible 1
-				
+
 				// comp-exclusive settings
 				// note: these don't display right on the private match menu yet
 				pilot_health_multiplier 1.25
 				respawn_delay 7.0
-				
+
 				boosts_enabled 1 // this is actually disabled lol
 				earn_meter_pilot_overdrive 0
 				earn_meter_pilot_multiplier 0.5
 				earn_meter_titan_multiplier 0.5
-				
+
 				scorelimit 6
 				timelimit 14
 			}
@@ -680,14 +681,14 @@ playlists
 				image tdm
 				timelimit 10
 				max_players 16
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_TDM
 			}
 			gamemodes
 			{
 				hs
 				{
-					maps 
+					maps
 					{
 						mp_complex3 1
 						mp_drydock 1
@@ -868,9 +869,9 @@ playlists
 				abbreviation #PL_sns_abbr
 				image ps
 				visible 0
-				
+
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_FFA
-			}	
+			}
 			gamemodes
 			{
 				sns
@@ -900,6 +901,41 @@ playlists
 						mp_rise 1
 						mp_coliseum 1
 						mp_coliseum_column 1
+					}
+				}
+				fd_easy
+				{
+					vars
+					{
+						fd_player_damage_doomed_scalar		1.0
+					}
+				}
+				fd_normal
+				{
+					vars
+					{
+						fd_player_damage_doomed_scalar		1.0
+					}
+				}
+				fd_hard
+				{
+					vars
+					{
+						fd_player_damage_doomed_scalar		1.25
+					}
+				}
+				fd_master
+				{
+					vars
+					{
+						fd_player_damage_doomed_scalar		1.25
+					}
+				}
+				fd_insane
+				{
+					vars
+					{
+						fd_player_damage_doomed_scalar		1.25
 					}
 				}
 			}
